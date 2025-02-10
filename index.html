@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Holt Bio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    
+    function scrollToContact() {
+        document.querySelector(".contact-section").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+<body>
+
+    <header class="toolbar">
+        <div class="toolbar-content">
+            <div class="toolbar-left">
+                <button onclick="scrollToTop()">Home</button>
+                <a href="https://www.linkedin.com/in/tmholt02/" target="_blank" class="linkedin-btn"><button>LinkedIn</button></a>
+            </div>
+            <div class="toolbar-right">
+                <button onclick="scrollToContact()">Contact</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Thomas Holt Bio</h1>
+        <section class="bio">
+            <div class="column left">
+                <h2>About Me</h2>
+                <p>
+                    I'm a computer science student at Texas A&M. I spend my whole day (well some days) experimenting with JS, C++, and other 
+                    industry tools while dabbling with new and exciting things while consuming a wide variety of potentially useless information  
+                    through the wide internet. I build tools that delight and inform. I do my best.
+                </p>
+                
+                <h2>Accessibility</h2>
+                <p>
+                    I am interested in many aspects of 
+                    <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">accessibility</a>. 
+                    I enjoy considering ways to serve and help individuals with diverse needs, 
+                    ensuring that technology and everyday experiences are inclusive for everyone. 
+                </p>
+                
+                <ul>
+                    <li><strong>Visually Disabled</strong> – Exploring ways to improve screen readers, contrast settings, and tactile feedback for better interaction.</li>
+                    <li><strong>Cognitively Challenged</strong> – Thinking about how to simplify user interfaces, reduce cognitive load, and improve clarity in instructions.</li>
+                    <li><strong>Mobility-Impaired Users</strong> – Investigating accessible navigation, voice controls, and alternative input methods to aid usability.</li>
+                    <li><strong>Hearing-Impaired Individuals</strong> – Supporting captions, sign language recognition, and text-based communication alternatives.</li>
+                </ul>
+                
+                <p>
+                    My consideration of accessibility comes from a hope to ensure 
+                    that no one is left behind when seeing my digital content 
+                    or physical spaces. I am particularly interested in how modern 
+                    AI and software solutions can bridge these gaps, making 
+                    technology more intuitive and inclusive.
+                </p>
+                
+
+            </div>
+            <div class="column right">
+                <img src="thomas.jpg" width="400" alt="thomas holt">
+                <h2>Location</h2>
+                <p>
+                    I am from Fort Worth, Texas, but I have been spending most of my time 
+                    in <a href="https://www.cstx.gov/" target="_blank">College Station Texas</a> until I graduate in the spring of 2025. 
+                    (Hey, thats pretty soon!)
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact</h2>
+            <form action="mailto:tmholt02@tamu.edu" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
+                <button type="submit">Send Via Client</button>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>
